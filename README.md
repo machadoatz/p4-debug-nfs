@@ -60,9 +60,9 @@ The controller creates table entries for new flows and deletes them after 10 min
 ### Reproduce the issue 
 
 To reproduce the issue, confirm the that you checkout and build BMv2 to the `commit fc54206cab45a9d8d64db0661578828ce78e962b` (https://github.com/p4lang/behavioral-model).
-Then inject traffic in the Mininet network with tcpreplay. 
 
-Inside the Mininet Shell I run the command `noecho h1 time tcpreplay -i eth0 ~/pcaps/uniform.pcap`. I also use the flag `-M` to adjust the speed at which the packets are introduced in the network, so that no packets are dropped.
+Then inject traffic in the Mininet network with tcpreplay. 
+To do this, inside the Mininet Shell I run the command `noecho h1 time tcpreplay -i eth0 ~/pcaps/uniform.pcap`. I also use the flag `-M` to adjust the speed at which the packets are introduced in the network, so that no packets are dropped.
 I did this with a pcap with 3 Million packets, although I was never able to process the pcap in its entirity.
 
 I have been using this pcap: 
